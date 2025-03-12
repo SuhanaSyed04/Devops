@@ -1,0 +1,89 @@
+/* Page Background */
+body {
+    background-color: #ffdab9; /* Peach Color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+.app h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px; /* Push it a little top */
+    color: #333;
+    letter-spacing: 2px;
+  }
+  
+  /* Centered White Card */
+  .game-container {
+    background: white;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 450px;
+    position: relative;
+  }
+  
+  /* Status Text */
+  .status {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  /* Board */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 15px;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  /* Squares */
+  .square {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid black;
+    cursor: pointer;
+    background-color: white;
+    transition: background 0.3s ease-in-out, transform 0.1s ease-in-out;
+  }
+  
+  .square:hover {
+    background-color: #ffdab9;;
+    transform: scale(1.05);
+  }
+  
+  /* Winner Popup & Blur Effect */
+  .game-container.blur {
+    filter: blur(5px);
+  }
+  
+  /* Pop-Up */
+  .winner-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 25px;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+  
+  /* Ensuring the pop-up is NOT blurred */
+  .winner-popup h2 {
+    margin: 0;
+  }
+  

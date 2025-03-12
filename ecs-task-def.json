@@ -1,0 +1,20 @@
+{
+    "family": "tic-tac-toe-task",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+      {
+        "name": "tic-tac-toe-container",
+        "image": "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/tic-tac-toe-app:latest",
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 80,
+            "protocol": "tcp"
+          }
+        ]
+      }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256",
+    "memory": "512"
+}
