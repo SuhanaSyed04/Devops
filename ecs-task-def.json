@@ -1,13 +1,24 @@
 {
     "family": "tic-tac-toe-task",
     "executionRoleArn": "arn:aws:iam::515966516532:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256",
+    "memory": "512",
     "containerDefinitions": [
       {
         "name": "tic-tac-toe-container",
-        "image": "<515966516532>.dkr.ecr.<AWS_REGION>.amazonaws.com/tic-tac-toe-app:latest",
+        "image": "515966516532.dkr.ecr.eu-north-1.amazonaws.com/tic-tac-toe-app:latest",
         "memory": 512,
         "cpu": 256,
-        "essential": true
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 3000,
+            "hostPort": 3000,
+            "protocol": "tcp"
+          }
+        ]
       }
     ]
   }
