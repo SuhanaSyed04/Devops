@@ -45,6 +45,8 @@ jobs:
           task-definition: ecs-task-def.json
           container-name: tic-tac-toe-container
           image: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/tic-tac-toe-app:latest
+          task-execution-role: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ecsTaskExecutionRole
+
 
       - name: Deploy to Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
