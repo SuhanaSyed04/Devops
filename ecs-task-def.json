@@ -1,6 +1,6 @@
 {
     "family": "tic-tac-toe-task",
-    "executionRoleArn": "arn:aws:iam::<515966516532>:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::515966516532:role/ecsTaskExecutionRole",
     "containerDefinitions": [
       {
         "name": "tic-tac-toe-container",
