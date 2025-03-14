@@ -19,7 +19,7 @@ body {
   
   /* Centered White Card */
   .game-container {
-    background: white;
+    background: rgb(59, 57, 57);
     padding: 50px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
